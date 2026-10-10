@@ -16,7 +16,7 @@ export async function POST(req: Request) {
     p.layout = "LAYOUT_WIDE";
     p.author = "EduAI Slide Studio"; p.subject = "Bài giảng được chuyển đổi từ kế hoạch bài dạy";
     p.title = deck.title || "Bài giảng"; p.company = "EduAI";
-    p.theme = { headFontFace: "Aptos Display", bodyFontFace: "Aptos", lang: "vi-VN" };
+    //p.theme = { headFontFace: "Aptos Display", bodyFontFace: "Aptos", lang: "vi-VN" };
     const c = palettes[style] || palettes.modern;
     const W = 13.333, H = 7.5;
     deck.slides.forEach((s: any, idx: number) => {
