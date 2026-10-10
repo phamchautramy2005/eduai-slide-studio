@@ -26,7 +26,7 @@ export async function POST(req: Request) {
       slide.addText("EDUAI  /  CLASSROOM", { x: 0.55, y: 0.28, w: 5.5, h: 0.25, fontFace: "Aptos", fontSize: 9, bold: true, charSpacing: 1.3, color: c.accent, margin: 0 });
       slide.addText(`${String(idx + 1).padStart(2, "0")}  /  ${String(deck.slides.length).padStart(2, "0")}`, { x: 11.4, y: 0.28, w: 1.25, h: 0.25, align: "right", fontSize: 9, color: c.muted, margin: 0 });
       slide.addShape(p.ShapeType.line, { x: 0.55, y: 0.72, w: 12.2, h: 0, line: { color: "DCD9EC", width: 0.8 } });
-      slide.addText(String(s.title || "Nội dung bài học"), { x: 0.65, y: 1.02, w: 11.9, h: 0.78, fontFace: "Aptos Display", fontSize: idx === 0 ? 30 : 26, bold: true, color: c.text, breakLine: false, fit: "shrink", margin: 0.03, valign: "mid" });
+      slide.addText(String(s.title || "Nội dung bài học"), { x: 0.65, y: 1.02, w: 11.9, h: 0.78, fontFace: "Aptos Display", fontSize: idx === 0 ? 30 : 26, bold: true, color: c.text, breakLine: false, fit: "shrink", margin: 0.03, valign: "center" });
       if (s.purpose) slide.addText(String(s.purpose), { x: 0.68, y: 1.88, w: 11.8, h: 0.42, fontSize: 12, color: c.muted, italic: true, fit: "shrink", margin: 0.02 });
       const bullets = Array.isArray(s.bullets) ? s.bullets.slice(0, 6) : [];
       const startY = s.purpose ? 2.48 : 2.25;
